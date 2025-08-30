@@ -8,13 +8,13 @@ int main() {
 
 	if (WHBProcIsRunning()) {
 		if (
-			SYSCheckTitleExists(0x000500301001300A) || // * JPN
-			SYSCheckTitleExists(0x000500301001310A) || // * USA
-			SYSCheckTitleExists(0x000500301001320A)    // * EUR
+			SYSCheckTitleExists(0x000500301001500A) || // * JPN
+			SYSCheckTitleExists(0x000500301001510A) || // * USA
+			SYSCheckTitleExists(0x000500301001520A)    // * EUR
 		) {
-			_SYSSwitchTo(SYSAPP_PFID_TVII);
+			_SYSSwitchTo(SYSAPP_PFID_FRIENDLIST);
 		} else {
-			OSFatal("Failed to find TVii");
+			OSFatal("Failed to find Friend List");
 		}
 
 		while(WHBProcIsRunning()) {}
